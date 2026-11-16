@@ -12,18 +12,26 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
       - name: Install dependencies and start server
         run: |
           npm install
           WEATHER_API_KEY=1234 npm start &
           sleep 3
-          
+
       - name: Install Postman CLI
-        run: curl -o- "https://pstmn.io" | sh
-        
+        run: |
+          curl -o- "https://pstmn.io" | sudo sh
+          echo "$HOME/.postman" >> $GITHUB_PATH
+
       - name: Login to Postman
         run: postman login --with-api-key ${{ secrets.POSTMANTESTING_API_KEY }}
-        
+
       - name: Run PostAir test suite
         run: postman collection run 60204061-7d18f702-6789-4456-ae38-0da0ba33bee5 -e 60204061-3b5ca730-ed82-4807-8bd2-81c918b2c75e
+
