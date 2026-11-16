@@ -13,6 +13,6 @@ jobs:
       - name: Install Postman CLI
         run: curl -o- "https://dl-cli.pstmn.io/install/linux64.sh" | sh
       - name: Login to Postman
-        run: postman login --with-api-key ${{ secrets.POSTMAN_API_KEY }}
+        run: postman login --with-api-key ${{ secrets.POSTMANTESTING_API_KEY }}
       - name: Run PostAir test suite
         run: postman collection run <60204061-7d18f702-6789-4456-ae38-0da0ba33bee5> -e <60204061-3b5ca730-ed82-4807-8bd2-81c918b2c75e>
