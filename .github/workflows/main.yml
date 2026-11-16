@@ -25,7 +25,7 @@ jobs:
           sleep 3
 
       - name: Install Postman CLI
-        uses: postman/postman-cli-action@v1
+        run: npm install -g postman-cli
 
       - name: Login to Postman
         run: postman login --with-api-key ${{ secrets.POSTMANTESTING_API_KEY }}
