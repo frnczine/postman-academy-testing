@@ -12,6 +12,10 @@ cloudResources:
     ../postman/specs/PostAir Weather API/postair-openapi-3_1.json: 83078fbf-2d41-4efe-964f-09e039c17ebc
   globals:
     ../postman/globals/workspace.globals.yaml: 40663a6b-afe2-4f98-8a2e-4b7438859253
+  collections:
+    ../postman/collections/PostAir Weather API: 60204061-7d18f702-6789-4456-ae38-0da0ba33bee5
+  environments:
+    ../postman/environments/Test Env.environment.yaml: 60204061-3b5ca730-ed82-4807-8bd2-81c918b2c75e
 resourceNameMappings:
   specs:
     - ../postman/specs/PostAir Weather API/postair-openapi-3_1.yaml: PostAir Weather API
