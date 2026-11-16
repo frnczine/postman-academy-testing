@@ -1,8 +1,20 @@
-# Use this workspace to collaborate
 workspace:
   id: 554f6380-4e9a-4f11-9abf-4b0aeae97b05
-
 localResources:
   specs:
     - ../api-docs/postair-openapi-3_1.json
     - ../api-docs/postair-openapi-3_1.yaml
+cloudResources:
+  specs:
+    ../api-docs/postair-openapi-3_1.json: a1426d45-ceba-4fc3-9046-563b764fc254
+    ../api-docs/postair-openapi-3_1.yaml: 322debe5-3fca-42e7-9956-6928173407e6
+    ../postman/specs/PostAir Weather API/postair-openapi-3_1.yaml: bbc9ee90-ef18-41c6-89da-e8c86528dca0
+    ../postman/specs/PostAir Weather API/postair-openapi-3_1.json: 83078fbf-2d41-4efe-964f-09e039c17ebc
+  globals:
+    ../postman/globals/workspace.globals.yaml: 40663a6b-afe2-4f98-8a2e-4b7438859253
+resourceNameMappings:
+  specs:
+    - ../postman/specs/PostAir Weather API/postair-openapi-3_1.yaml: PostAir Weather API
+    - ../postman/specs/PostAir Weather API/postair-openapi-3_1.json: PostAir Weather API
+    - ../api-docs/postair-openapi-3_1.yaml: postair-openapi-3_1.yaml
+    - ../api-docs/postair-openapi-3_1.json: postair-openapi-3_1.json
